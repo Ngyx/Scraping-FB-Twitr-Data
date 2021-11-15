@@ -8,7 +8,7 @@ dir_name = 'C:/Users/Ng Yixiang/Desktop/Projects/[MinLaw]/Scraping FB Twitr data
 
 #%% facebook-sdk api ###
 import facebook
-token = 'EAAOxgKgOKJQBAGDAxtqgX6ZCIssKesT8x589jR2HBdnOgbbbRPQtQM0MATH53lrSUrHR1RhM70WAyuEK4G25WBb2ZACcjZA7bDdiT79iMH721iY4dKduv39OGV0n3JpgPLvA2YRDTqhZAq4jjeI2ZCy6V5sZCZBJt0mXdAjV5tUiKZBrZAFvnZB8FF5am9dHi2F40ZD'
+token = ''
 graph = facebook.GraphAPI(access_token=token)
 events = graph.request('/search?q=Poetry&type=event&limit=10000')
 
@@ -37,15 +37,14 @@ post_df_full_reactions = post_df_full['reactions'].apply(pd.Series)
 df_final = pd.concat([post_df_full,post_df_full_reactions],axis=1).drop('reactions',axis=1)
 
 #%% Tweepy ####
-# Bearer token: AAAAAAAAAAAAAAAAAAAAACIxVwEAAAAAd4Jq1%2FMcYljM29aBp5%2FPf4tNsJc%3DL7duOYaVFQKYkstYhnLZEnXPqeLYO82rflMCwUY9I9C7ZDuomJ
 
 import tweepy
 import pandas as pd
 
-access_token = '1458722337663041540-LZHCbQoVehu0AOlT8ajFSPnYggml8A'
-access_token_secret = 'jH851pgxcof5N6BoKHSH8ZQTm1fHiMZvs1fKRAhprfnyJ'
-consumer_key = 'Cwy65x0Yu2Vwq6WCA8V3ReO5D'
-consumer_secret = 'BfV3iW7tWKCOK8ZWSjqcOr1pjOBiuwkLBrTjO8Q0YrGUjT5i04'
+access_token = ''
+access_token_secret = ''
+consumer_key = ''
+consumer_secret = ''
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
